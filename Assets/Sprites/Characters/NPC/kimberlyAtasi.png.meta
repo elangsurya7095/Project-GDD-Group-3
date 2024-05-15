@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb64f47455a975b4381d56fd0a4f688e
+guid: df4ff270b7b5e6546851b73b6205146a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BocilKiri_0
+      name: kimberlyAtasi_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fd1bd5509129ae4a8e0f4362dd1b5f4
-      internalID: 802852111
+      spriteID: 35f6d5125c0e1ae46939436d84638e03
+      internalID: 891745508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BocilKiri_1
+      name: kimberlyAtasi_1
       rect:
         serializedVersion: 2
         x: 50
@@ -145,8 +145,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d77d94ec043d2834c94d0189d925ff1c
-      internalID: 1894917656
+      spriteID: f6ab1f2ecffae0c4f8da20a0e3bb59b8
+      internalID: -252053870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kimberlyAtasi_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8eb62034db247a4a9a1f27e877f327f
+      internalID: -699726990
       vertices: []
       indices: 
       edges: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BocilKiri_0: 802852111
-      BocilKiri_1: 1894917656
+      kimberlyAtasi_0: 891745508
+      kimberlyAtasi_1: -252053870
+      kimberlyAtasi_2: -699726990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

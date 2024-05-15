@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6288d521cf94aa4da5d1f70cd791040
+guid: c5be50bf755b6e145aec95dfeb050f8b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BocilBawah_0
+      name: BocilAtas_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c16ff9a6d436b4448961a40194e43f57
-      internalID: 628609528
+      spriteID: a24f14b5bbef69f469e6be1532a5ed6d
+      internalID: 403118868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BocilBawah_1
+      name: BocilAtas_1
       rect:
         serializedVersion: 2
         x: 50
@@ -145,8 +145,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 928a6722a69ed384f81ec21acfe57580
-      internalID: -1623467984
+      spriteID: c4e915d32bc98044c9972d1194ab3678
+      internalID: 783303115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BocilAtas_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d761e4ee85014347b4d866b5bb3ff49
+      internalID: -1784119391
       vertices: []
       indices: 
       edges: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BocilBawah_0: 628609528
-      BocilBawah_1: -1623467984
+      BocilAtas_0: 403118868
+      BocilAtas_1: 783303115
+      BocilAtas_2: -1784119391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
