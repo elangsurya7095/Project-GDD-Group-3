@@ -4,63 +4,35 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
-    public Transform player; // Referensi ke karakter utama
-    public Vector3 offset = new Vector3(1f, -0.5f, 0f); // Offset relatif untuk posisi NPC
+    public Transform player; // Referensi ke Transform player
+    public float moveSpeed = 0.1f; // Kecepatan NPC
+    public float stoppingDistance = 1.0f; // Jarak aman dari player
     private Animator animator;
-    private Animator playerAnimator; // Referensi ke animator karakter utama
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        
-        // Menemukan komponen Animator dari karakter utama
-        if(player != null)
-        {
-            playerAnimator = player.GetComponent<Animator>();
-        }
     }
 
     private void Update()
     {
-        if (player != null)
+        float distance = Vector2.Distance(transform.position, player.position);
+
+        if (distance > stoppingDistance)
         {
-            // Mendapatkan posisi target NPC
-            Vector3 targetPosition = player.position + offset;
+            Vector2 direction = (player.position - transform.position).normalized;
 
-            // Mengatur posisi NPC dengan offset
-            transform.position = targetPosition;
+            Vector2 move = direction * moveSpeed * Time.deltaTime;
 
-            // Mendapatkan arah karakter utama terhadap NPC
-            float direction = Mathf.Sign(player.localScale.x);
+            transform.position = new Vector2(transform.position.x + move.x, transform.position.y + move.y);
 
-            // Mendapatkan arah karakter utama
-            float playerHorizontalInput = Input.GetAxisRaw("Horizontal");
-            float playerVerticalInput = Input.GetAxisRaw("Vertical");
-
-            // Mengatur animasi NPC berdasarkan arah karakter utama
-            if (playerHorizontalInput != 0 || playerVerticalInput != 0)
-            {
-                // Jika ada input dari pemain, gunakan input tersebut
-                animator.SetFloat("moveX", playerHorizontalInput);
-                animator.SetFloat("moveY", playerVerticalInput);
-            }
-            else if (playerAnimator != null)
-            {
-                // Jika tidak ada input, gunakan arah terakhir dari karakter utama
-                bool isMoving = playerAnimator.GetBool("isMoving");
-                float lastMoveX = playerAnimator.GetFloat("moveX");
-                float lastMoveY = playerAnimator.GetFloat("moveY");
-                animator.SetFloat("moveX", lastMoveX);
-                animator.SetFloat("moveY", lastMoveY);
-            }
-
-            // Memanggil fungsi animasi dari skrip karakter utama
-            if(playerAnimator != null)
-            {
-                // Memanggil variabel isMoving dari skrip karakter utama
-                bool isMoving = playerAnimator.GetBool("isMoving");
-                animator.SetBool("isMoving", isMoving);
-            }
+            animator.SetFloat("moveX", direction.x);
+            animator.SetFloat("moveY", direction.y);
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 }
