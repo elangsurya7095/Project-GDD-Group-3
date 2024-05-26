@@ -12,8 +12,8 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menupanel1.SetActive(true);
-        menupanel2.SetActive(false);
+        menupanel2.SetActive(true);
+        // menupanel2.SetActive(false);
         // setting.SetActive(false);
     }
 
@@ -31,6 +31,13 @@ public class MainMenu : MonoBehaviour
     public void StartButtonPanel1(){
         menupanel1.SetActive(false);
         menupanel2.SetActive(true); 
+    }
+
+        public void ExitGame(){
+        Application.Quit();
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 
     // public void SettingButton(){
