@@ -5,57 +5,53 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-    private bool isMoving;
     private Vector2 input;
     private Animator animator;
+    private Rigidbody2D rb;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+
+        PhysicsMaterial2D lowFrictionMaterial = new PhysicsMaterial2D();
+        lowFrictionMaterial.friction = 0.1f; 
+        lowFrictionMaterial.bounciness = 0.0f; 
+
+        Collider2D collider2D = GetComponent<Collider2D>();
+        collider2D.sharedMaterial = lowFrictionMaterial;
+
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
 
     private void Update()
     {
-        if (!isMoving)
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+
+        Debug.Log("This is input.x: " + input.x);
+        Debug.Log("This is input.y: " + input.y);
+
+        if (input.x != 0) input.y = 0;
+
+        if (input != Vector2.zero)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-
-            Debug.Log("This is input.x" + input.x);
-            Debug.Log("This is input.y" + input.y);
-
-            
-
-            if (input.x != 0) input.y = 0;
-
-            if (input !=Vector2.zero)
-            {
-                animator.SetFloat("moveX", input.x);
-                animator.SetFloat("moveY", input.y);
-                
-                var targetPos = transform.position;
-                targetPos.x += input.x;
-                targetPos.y += input.y;
-
-                StartCoroutine(Move(targetPos));
-            }
+            animator.SetFloat("moveX", input.x);
+            animator.SetFloat("moveY", input.y);
+            animator.SetBool("isMoving", true);
         }
-
-        animator.SetBool("isMoving", isMoving);
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
     }
 
-    IEnumerator Move(Vector3 targetPos)
+    private void FixedUpdate()
     {
-        isMoving = true;
-
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
+        if (input != Vector2.zero)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-            yield return null;
+            Vector2 targetPos = rb.position + input * moveSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(targetPos);
         }
-        transform.position = targetPos;
-
-        isMoving = false;
     }
-
 }
