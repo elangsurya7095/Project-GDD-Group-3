@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8216b3f5aa34046a3348e6810b75a2, type: 3}
+  m_Name: Question 5
+  m_EditorClassIdentifier: 
+  question: Pancasila Terdiri dari berapa sila ?
+  category: PKN
+  answers:
+  - 5
+  - 1
+  - 1945
+  - 3,14

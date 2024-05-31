@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
-        Debug.Log("This is input.x: " + input.x);
-        Debug.Log("This is input.y: " + input.y);
+        //Debug.Log("This is input.x: " + input.x);
+        //Debug.Log("This is input.y: " + input.y);
 
         if (input.x != 0) input.y = 0;
 
