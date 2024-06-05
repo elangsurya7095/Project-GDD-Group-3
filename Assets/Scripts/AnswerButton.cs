@@ -7,6 +7,7 @@ public class AnswerButton : MonoBehaviour
 {
     private bool isCorrect;
     [SerializeField] private TextMeshProUGUI answerText;
+    private QuestionSetup questionSetup; // Reference to QuestionSetup
 
     public void SetAnswerText(string newText)
     {
@@ -18,15 +19,13 @@ public class AnswerButton : MonoBehaviour
         isCorrect = newBool;
     }
 
+    public void SetQuestionSetup(QuestionSetup setup) // Method to set reference to QuestionSetup
+    {
+        questionSetup = setup;
+    }
+
     public void OnClick()
     {
-        if(isCorrect)
-        {
-            Debug.Log("JAWABAN BENAR");
-        }
-        else
-        {
-            Debug.Log("JAWABAN SALAH");
-        }
+        questionSetup.CheckAnswer(isCorrect);
     }
 }
