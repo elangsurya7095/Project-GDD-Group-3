@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
+    public float pushForce = 10f; // Besarnya gaya dorongan yang akan diberikan
     private Vector2 input;
     private Animator animator;
     private Rigidbody2D rb;
@@ -54,4 +55,6 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(targetPos);
         }
     }
+
+    
 }
