@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 15874219}
   - component: {fileID: 15874218}
   - component: {fileID: 15874221}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -669,7 +669,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 477e4657494e458478514b5a35ef5b4a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7ecacc897b0f71848b02f2d516886954, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -961,7 +961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Noah's Quest
+  m_text: Forest Ranger
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a89e4e606be1d614581ea807aec22bfa, type: 2}
   m_sharedMaterial: {fileID: -5148369898121299105, guid: a89e4e606be1d614581ea807aec22bfa, type: 2}
