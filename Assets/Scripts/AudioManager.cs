@@ -5,16 +5,17 @@ public class AudioManager : MonoBehaviour
 {
     [Header("---Audio Source---")]
     [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource sfxSource;
+    [SerializeField] AudioSource SFXSource;
 
-    [Header("---Audio Source---")]
+    [Header("---Audio Clip---")]
     public AudioClip background;
     public AudioClip jalan;
     //public AudioClip quiz;
 
-    private void start()
+    private void Start()
     {
         musicSource.clip = background;
         musicSource.Play();
     }
+
 }

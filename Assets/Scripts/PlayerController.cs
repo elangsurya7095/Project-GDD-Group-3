@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
-    public float pushForce = 10f; // Besarnya gaya dorongan yang akan diberikan
     private Vector2 input;
     private Animator animator;
     private Rigidbody2D rb;
+
+    public AudioSource stepSound; // Tambahkan referensi ke Audio Source
+    public float stepInterval = 0.5f; // Waktu jeda antar langkah
+    private float stepTimer = 0;
 
     private void Awake()
     {
@@ -30,9 +33,6 @@ public class PlayerController : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
-        //Debug.Log("This is input.x: " + input.x);
-        //Debug.Log("This is input.y: " + input.y);
-
         if (input.x != 0) input.y = 0;
 
         if (input != Vector2.zero)
@@ -40,10 +40,22 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("moveX", input.x);
             animator.SetFloat("moveY", input.y);
             animator.SetBool("isMoving", true);
+
+            stepTimer -= Time.deltaTime;
+            if (stepTimer <= 0)
+            {
+                if (!stepSound.isPlaying)
+                {
+                    stepSound.Play();
+                }
+                stepTimer = stepInterval;
+            }
         }
         else
         {
             animator.SetBool("isMoving", false);
+            stepSound.Stop();
+            stepTimer = 0; // Reset timer ketika player berhenti bergerak
         }
     }
 
@@ -55,6 +67,4 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(targetPos);
         }
     }
-
-    
 }
