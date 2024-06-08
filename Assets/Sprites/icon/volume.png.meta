@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a347628912252514c81515ed19ef941a
+guid: 604b7de0234950042b140627302918da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,22 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button Jawaban_0
+      name: volume_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 32
-        width: 47
-        height: 16
+        x: 7
+        y: 12
+        width: 2
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 3, z: 3, w: 3}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c82839d49ceaed468834a2b81e8a0d9
-      internalID: 2114149826
+      spriteID: 6c55d6aabc388ff408de92fc87556aeb
+      internalID: -400737291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volume_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 13
+        width: 16
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e5a9bd49f8330468b111de9c6fb2f2
+      internalID: -226673172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volume_2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 14
+        width: 14
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46b7e204e9cfa7419565bbf5e496c58
+      internalID: -1917802179
       vertices: []
       indices: 
       edges: []
@@ -141,7 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Button Jawaban_0: 2114149826
+      volume_0: -400737291
+      volume_1: -226673172
+      volume_2: -1917802179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

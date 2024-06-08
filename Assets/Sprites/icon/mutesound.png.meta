@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a347628912252514c81515ed19ef941a
+guid: 01e649019d99633428885e55fd5b50bc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button Jawaban_0
+      name: mutesound_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 32
-        width: 47
-        height: 16
+        x: 16
+        y: 28
+        width: 16
+        height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 3, z: 3, w: 3}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c82839d49ceaed468834a2b81e8a0d9
-      internalID: 2114149826
+      spriteID: 75a0f91ae37aeb6468c5223e29f05a04
+      internalID: 1082328569
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Button Jawaban_0: 2114149826
+      mutesound_0: 1082328569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
