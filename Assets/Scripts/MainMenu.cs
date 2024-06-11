@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject menupanel1;
+    // public GameObject menupanel1;
     public GameObject menupanel2;
-    // public GameObject setting;
-    // Start is called before the first frame update
+   
     void Start()
     {
         menupanel2.SetActive(true);
@@ -28,10 +27,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(scenename);
         }
 
-    public void StartButtonPanel1(){
-        menupanel1.SetActive(false);
-        menupanel2.SetActive(true); 
-    }
+    // public void StartButtonPanel1(){
+    //     menupanel1.SetActive(false);
+    //     menupanel2.SetActive(true); 
+    // }
 
         public void ExitGame(){
         Application.Quit();
@@ -40,16 +39,6 @@ public class MainMenu : MonoBehaviour
         #endif
     }
 
-    // public void SettingButton(){
-    //     menupanel1.SetActive(false);
-    //     menupanel2.SetActive(false);
-    //     setting.SetActive(true);
-    // }
-
-    // public void BackButton(){
-    //     menupanel1.SetActive(false);
-    //     menupanel2.SetActive(true);
-    //     setting.SetActive(false);
-    // }
+    
     
 }
